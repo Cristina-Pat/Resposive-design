@@ -1,0 +1,73 @@
+/* Media queries - responsive design */
+
+body {
+    /* remove default margin around outside of page */
+    margin: 0;
+}
+
+
+/*h1 {
+    font-size: 3vw; 
+} */
+
+article {
+    /* show articles as a grey box */
+    background-color: rgb(136, 136, 136);
+    /* make articles take up lots of space */
+    width: 1280px;
+    /* make article text easy to see */
+    color: #fff;
+    /*font-size: 2vw; */
+    font-size: 1.5rem;
+}
+
+
+/* change the status text to indicate this rule is being applied */
+
+article.text::after {
+    content: "Status: no media query applies";
+}
+
+
+/* vary the colour and width */
+
+@media screen and (max-width: 1280px) {
+    article {
+        background-color: rgb(224, 131, 224);
+        width: 960px;
+    }
+    article.text::after {
+        content: "Status: (max-width: 1280px) applies";
+    }
+}
+
+@media screen and (max-width: 960px) {
+    article {
+        background-color: rgb(110, 110, 201);
+        width: 640px;
+        max-width: 640px;
+    }
+    article.text::after {
+        content: "Status: (max-width: 960px) applies";
+    }
+}
+
+@media screen and (max-width: 640px) {
+    article {
+        background-color: rgb(214, 119, 75);
+        width: 340px;
+    }
+    article.text::after {
+        content: "Status: (max-width: 640px) applies";
+    }
+}
+
+@media screen and (max-width: 340px) {
+    article {
+        background-color: rgb(179, 21, 21);
+        width: auto;
+    }
+    article.text::after {
+        content: "Status: (max-width: 340px) applies";
+    }
+}

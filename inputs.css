@@ -1,0 +1,52 @@
+/* Inputs and Buttons - responsive design */
+
+button {
+    /* space out buttons */
+    margin: 1rem;
+}
+
+
+/* show each label/input on a new row with some space in between */
+
+.inputs label {
+    display: block;
+    margin: 1rem;
+}
+
+
+/* style buttons for mouse hover */
+
+button:hover {
+    border-color: rgb(223, 80, 14);
+}
+
+
+/* size buttons for mouse/stylus control - mobile(no touch) */
+
+@media screen and (pointer: fine) {
+    button {
+        padding: 3rem;
+        border: 1px solid #000;
+        background-color: rgb(47, 177, 177);
+    }
+}
+
+
+/* size buttons for touch control - mobile*/
+
+@media screen and (pointer: coarse) {
+    button {
+        padding: 4rem;
+        border: 2px solid #000;
+        background-color: rgb(151, 110, 189);
+    }
+}
+
+
+/* hide buttons when printing - print preview to see the effect*/
+
+@media print {
+    button {
+        display: none;
+    }
+}

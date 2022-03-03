@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Responsive images - responsive design</title>
+    <meta name="author" content="Cristina Pat" />
+    <!-- set viewport to ensure this page scales correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="images.css" />
+</head>
+
+<body>
+    <!-- photo credit: https://images.ctfassets.net/hrltx12pl8hq/34fRW1ghRVwbV9RCqrVhtk/bef9494d83e0ec726364d0156ce5e37e/shutterstock_675512473__1_.jpg -->
+    <main>
+        <h1>Flowers -responsive image element</h1>
+        <img class="responsive-left" src="images.jpg" alt="Flowers" />
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet sodales congue. Morbi blandit justo id ligula accumsan faucibus. Fusce fermentum, arcu in imperdiet tempus, nisi odio congue diam, in dignissim nulla magna id ligula. Morbi maximus
+            dolor sit amet consequat tincidunt. Donec viverra neque sapien, a fermentum dui mattis id.
+        </p>
+
+        <h1>Flowers - picture element</h1>
+        <picture>
+            <!-- modern browsers will substitute the first image that matches -->
+            <source srcset="images_large.jpg" media="(min-width: 1280px)" />
+            <source srcset="images_medium.jpg" media="(min-width: 420px)" />
+            <source srcset="images_small.jpg" />
+            <!-- older browsers will show this mandatory element -->
+            <img class="responsive" src="images-small.jpg" alt="Flowers" />
+        </picture>
+
+        <p>
+            Nam finibus dolor sit amet viverra efficitur. Mauris vel dolor lacus. Praesent libero orci, auctor eget massa sed, auctor scelerisque mi. Donec et pulvinar ex, nec pharetra eros. Cras eu lobortis arcu, congue faucibus est. Etiam ac luctus nisi. Nunc est
+            sapien, suscipit id imperdiet quis, lacinia quis risus. Ut sit amet interdum est, at interdum diam. Ut dapibus tincidunt orci eget sagittis. In hendrerit ante vitae vestibulum condimentum.
+
+        </p>
+    </main>
+</body>
+
+</html>

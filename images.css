@@ -1,0 +1,45 @@
+    /* Responsive images - responsive design */
+    
+    body {
+        /* remove default margin around outside of page */
+        margin: 0;
+    }
+    
+    h1 {
+        /* appear underneath, not to the side of, of any floated sibling element */
+        clear: both;
+    }
+    /* classes to apply to images to make them respond in different ways... */
+    
+    .responsive-nomax {
+        width: 100%;
+        height: auto;
+    }
+    
+    .responsive {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .responsive-left {
+        max-width: 50%;
+        height: auto;
+        float: left;
+        margin: 0 1rem 0.5rem 0;
+    }
+    
+    .responsive-right {
+        max-width: 50%;
+        height: auto;
+        float: right;
+        margin: 0 1rem 0.5rem 0;
+    }
+    
+    .responsive-stripe {
+        width: 100%;
+        height: auto;
+        /* limit the height to prevent it getting too tall */
+        max-height: 30rem;
+        /* rather than squash the image to fit, size and crop it such that it covers the element */
+        object-fit: cover;
+    }

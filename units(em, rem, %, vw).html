@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Relative units and containers - responsive design</title>
+    <meta name="author" content="Cristina Pat" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            /* remove 8 pixel default margin to fill the page */
+            margin: 0;
+            color: #303f5a;
+        }
+        
+        div {
+            border: 1px solid #a4af1b;
+            padding: 2px;
+            /* change sizing method so we do not need to deduct border/padding from width */
+            box-sizing: border-box;
+            /* set background to a translucent grey to indicate nesting */
+            background: rgba(127, 127, 127, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Relative units and containers</h1>
+    <div style="width: 80%;">
+        <h3>Percentage of container</h3>
+        This div element contains another div element.
+        <div style="width: 50%;">
+            This div element is contained by a div element.</div>
+    </div>
+    <p></p>
+    <div style="width: 80vw;">
+        <h3>Viewport width - percentage of viewport width</h3>
+        This div element contains another div element.
+        <div style="width: 50vw;">
+            This div element is contained by a div element.</div>
+    </div>
+    <p></p>
+    <div style="font-size: 2em;">
+        <h3>Font-size of elements - em</h3>
+        <!--em is relative to the font size of container-->
+        This div element contains another div element.
+        <div style="font-size: 1.5em;">
+            <!--this is  a child and is 2em*1.5em -->
+            This div element is contained by a div element.</div>
+    </div>
+    <p></p>
+    <div style="font-size: 2rem;">
+        <h3>Font-size of elements - rem</h3>
+        <!--rem is relative to the font size of the html element-->
+        This div element contains another div element.
+        <div style="font-size: 1.5rem;">
+            This div element is contained by a div element.</div>
+    </div>
+</body>
+
+</html>

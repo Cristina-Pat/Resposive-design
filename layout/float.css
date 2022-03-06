@@ -1,0 +1,71 @@
+/* Layout - responsive design */
+
+
+/* arrange boxs using floats - sized relative to their box */
+
+
+/* to make boxs float we set CSS rules on the div elements themselves */
+
+
+/* where width 25% = 4 elements per row */
+
+div {
+    /* float div blocks to the left */
+    float: left;
+    /* use margin to provide a 0.5rem gap between each div */
+    margin: 0.25rem;
+    /* use calc() function to deduct margin from width */
+    width: calc(25% - 1rem);
+    /* Change colour to indicate that rules are being applied  */
+    background-color: rgb(244, 178, 247);
+}
+
+
+/* add a pseudo-element with some explanatory text */
+
+div::after {
+    content: "width: calc(25% - 1rem)";
+}
+
+
+/* use clear fix to stop things floating more than we want */
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* use media queries to vary div width according to screen size */
+
+@media screen and (max-width: 35rem) {
+    div {
+        /* width 33.3% = 3 per row */
+        width: calc(33.3% - 1rem);
+    }
+    /* add explanatory text */
+    div::after {
+        content: "width: calc(33.3% - 1rem)";
+    }
+}
+
+@media screen and (max-width: 26rem) {
+    div {
+        /* width 50% = 2 per row */
+        width: calc(50% - 1rem);
+    }
+    div::after {
+        content: "width: calc(50% - 1rem)";
+    }
+}
+
+@media screen and (max-width: 17rem) {
+    div {
+        /* width 100% = 1 per row */
+        width: calc(100% - 1rem);
+    }
+    div::after {
+        content: "width: calc(100% - 1rem)";
+    }
+}

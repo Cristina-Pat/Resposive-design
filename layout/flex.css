@@ -1,0 +1,27 @@
+/* Layout - responsive design */
+
+
+/* arrange articles using flexbox - in rows or columns, 
+   allowed to grow and shrink to fit their container */
+
+
+/* set CSS rules on the article elements' container */
+
+section {
+    /* arrange children using flexbox rules */
+    display: flex;
+    /* allow articles to wrap onto multiple rows */
+    flex-wrap: wrap;
+}
+
+div {
+    /* allow each article to shrink and grow to fit the row
+     with initial size based on its width or content */
+    flex-shrink: 1;
+    flex-grow: 1;
+    /* use margin to provide a 1rem gap between each article */
+    margin: 0.5rem;
+    /* change colour to indicate that rules are being applied  */
+    background-color: rgb(218, 208, 164);
+    text-align: center;
+}

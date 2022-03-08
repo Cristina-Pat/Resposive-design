@@ -1,0 +1,47 @@
+/* Layout - responsive design */
+
+
+/* arrange articles using grid - in rows and columns of cells with complete control */
+
+
+/* set CSS rules on the article elements' container */
+
+section {
+    /* arrange children using grid rules */
+    display: grid;
+    /* four evenly-spaced columns by default*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* set the gap between rows/columns */
+    grid-gap: 0.5rem;
+}
+
+div {
+    /* change colour to indicate that rules are being applied  */
+    background-color: rgb(73, 51, 107);
+    color: aliceblue;
+    text-align: center;
+}
+
+
+/* use media queries to vary column count according to screen size */
+
+@media screen and (max-width: 760px) {
+    section {
+        /* three evenly spaced columns */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    section {
+        /* two evenly spaced columns */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    section {
+        /* one column */
+        grid-template-columns: 1fr;
+    }
+}

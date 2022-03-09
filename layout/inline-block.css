@@ -1,0 +1,17 @@
+/* Layout - responsive design */
+
+
+/* arrange boxes as inline blocks  */
+
+
+/* to make boxes into inline blocks we set CSS rules on the 
+   divs elements themselves */
+
+section {
+    /* allow div blocks to flow and wrap like text content */
+    display: inline-block;
+    /* ase margin to provide a 1rem gap between each div */
+    margin: 0.5rem;
+    /* change colour to indicate that rules are being applied  */
+    background-color: rgb(222, 233, 158);
+}
